@@ -211,17 +211,26 @@ class CarsScreen extends ConsumerWidget {
                               ),
                               Container(
                                   margin: const EdgeInsets.only(
-                                      left: 14, right: 14),
+                                      left: 12, right: 14),
                                   child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Text(
-                                        "${carItem[index].rating.toString() ?? 0} | 10 Trips",
-                                        style: TextStyle(
-                                            color: AppColors.darkGrey,
-                                            fontSize: 8.7,
-                                            fontWeight: FontWeight.w500),
+
+                                      Row(
+                                        children: [
+                                          Image.asset(
+                                              "assets/images/star_flat.png",
+                                              height: 14,
+                                              width: 14),
+                                          Text(
+                                            "${carItem[index].rating.toString() ?? 0} | 10 Trips",
+                                            style: TextStyle(
+                                                color: AppColors.darkGrey,
+                                                fontSize: 8.7,
+                                                fontWeight: FontWeight.w500),
+                                          ),
+                                        ],
                                       ),
                                       Text(
                                         "\$${carItem[index].price.toString() ?? ""}/day",
